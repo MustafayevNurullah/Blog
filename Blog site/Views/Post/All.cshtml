@@ -1,0 +1,32 @@
+﻿@model List<Blog_site.ViewModel.PostViewModel>
+
+<head>
+
+  <style>
+
+#b
+   {
+
+    background-color:aqua;
+ 
+    }
+ </style>
+
+
+</head>
+
+<button>Add Post</button>
+    @foreach (var post in Model)
+    {
+        <div id="b">
+            <h3>@post.Title</h3>
+            <p>@post.Text</p>
+            <input type="text" />
+            <button>Comment</button>
+        <a href="/Post/GetPost/@post.Id"/>    
+        </div>
+    }
+
+
+
+
